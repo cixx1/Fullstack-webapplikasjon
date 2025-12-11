@@ -15,7 +15,7 @@ price
 features (JSON eller TEXT)
 
 leads
-idl
+id
 name
 email
 message

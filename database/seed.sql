@@ -3,6 +3,6 @@ VALUES ('Infoskjerm-system', 'Plug-and-play Raspberry Pi infoskjerm-løsning for
 
 INSERT INTO packages (product_id, name, price, features)
 VALUES
-(1, 'Standard pakke', 5500, 'Skjerm, Raspberry Pi 5, strømadapter, oppsett'),
-(2, 'Premium pakke', 7500, 'Større skjerm, Raspberry Pi 5, veggfeste, oppsett'),
-(3, 'Service-avtale', 299, 'Fjernsupport, overvåkning, innholdsoppdatering');
+(1, 'Basic Pakke', 5500, 'Raspberry Pi 5 ferdig programmert; 27\" skjerm; kabler/case/feste; hotspot-onboarding; USB-reset; oppsett på stedet; 1 måned gratis test; ingen løpende service'),
+(1, 'Pro Service', 299, 'Månedlige innholdsoppdateringer; oppfølging av at skjermen virker; feilretting remote/på stedet; enkle tillegg som vær-visning'),
+(1, 'Enterprise', 0, '6+ infoskjermer; tilpasset hardware og oppsett; serviceavtale, enkel administrasjon og oppstartshjelp; direkte dialog for behov; pris etter avtale');
