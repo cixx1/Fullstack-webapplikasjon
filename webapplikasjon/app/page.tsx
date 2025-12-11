@@ -343,7 +343,7 @@ export default function Home() {
                 <input
                   type="tel"
                   className="rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2 text-white outline-none transition focus:border-green-500"
-                  placeholder="+47 900 00 000"
+                  placeholder="+47 469 12 518"
                 />
               </label>
             </div>
@@ -373,7 +373,7 @@ export default function Home() {
           <div>
             <p className="text-white">Infoskjerm AS</p>
             <p>Org.nr 123 456 789</p>
-            <p>info@infoskjerm.no · +47 99 00 00 00</p>
+            <p>cornelius.jors9@gmail.com · +47 469 12 518</p>
           </div>
           <div className="flex gap-4">
             <a className="hover:text-white" href="#benefits">
