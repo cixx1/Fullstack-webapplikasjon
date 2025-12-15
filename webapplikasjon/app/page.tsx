@@ -1,3 +1,5 @@
+import ContactForm from "./ContactForm";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50">
@@ -320,51 +322,7 @@ export default function Home() {
               <p className="text-zinc-300">+47 469 12 518</p>
             </div>
           </div>
-          <form className="space-y-4">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <label className="flex flex-col gap-2 text-sm">
-                Navn
-                <input
-                  type="text"
-                  className="rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2 text-white outline-none transition focus:border-green-500"
-                  placeholder="Ola Nordmann"
-                />
-              </label>
-              <label className="flex flex-col gap-2 text-sm">
-                E-post
-                <input
-                  type="email"
-                  className="rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2 text-white outline-none transition focus:border-green-500"
-                  placeholder="deg@firma.no"
-                />
-              </label>
-              <label className="flex flex-col gap-2 text-sm sm:col-span-2">
-                Telefon
-                <input
-                  type="tel"
-                  className="rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2 text-white outline-none transition focus:border-green-500"
-                  placeholder="+47 469 12 518"
-                />
-              </label>
-            </div>
-            <label className="flex flex-col gap-2 text-sm">
-              Hva trenger du?
-              <textarea
-                rows={4}
-                className="rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2 text-white outline-none transition focus:border-green-500"
-                placeholder="Antall skjermer, type innhold, lokasjon ..."
-              />
-            </label>
-            <button
-              type="button"
-              className="w-full rounded-lg bg-green-500 px-4 py-2 text-sm font-semibold text-black transition hover:bg-green-400"
-            >
-              Send forespørsel
-            </button>
-            <p className="text-xs text-zinc-500">
-              Dette er kun frontend. Koble til e-post eller CRM i neste steg.
-            </p>
-          </form>
+          <ContactForm />
         </section>
       </main>
 
