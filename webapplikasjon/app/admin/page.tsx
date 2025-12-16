@@ -19,7 +19,7 @@ export default function AdminPage() {
       <main className="mx-auto max-w-6xl px-6 pb-12">
         <section className="grid gap-6 md:grid-cols-2">
           <div>
-            <p className="text-sm text-zinc-400">Viser henvendelser fra kontaktskjema. Dette er en visuell plassholder — vi kobler til API senere.</p>
+            <p className="text-sm text-zinc-400">Viser henvendelser fra kontaktskjema.</p>
             <LeadsList />
           </div>
 

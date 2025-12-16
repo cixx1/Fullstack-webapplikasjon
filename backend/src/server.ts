@@ -29,6 +29,18 @@ app.post("/api/leads", async (req, res) => {
   }
 });
 
+app.get("/api/leads", async (_req, res) => {
+  try {
+    const result = await pool.query(
+      "SELECT id, name, email, message, created_at FROM leads ORDER BY created_at DESC"
+    );
+    return res.json(result.rows);
+  } catch (err) {
+    console.error("DB error:", err);
+    return res.status(500).json({ error: "Kunne ikke hente leads" });
+  }
+});
+
 app.get("/api/health", (_req, res) => {
   res.json({ ok: true });
 });

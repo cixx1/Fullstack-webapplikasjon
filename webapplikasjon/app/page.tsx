@@ -29,6 +29,12 @@ export default function Home() {
             >
               Book en demo
             </a>
+            <a
+              className="rounded-lg border border-zinc-700 px-6 py-3 text-base font-semibold text-zinc-50 transition hover:border-zinc-500 hover:text-white"
+              href="/admin"
+            >
+              Admin
+            </a>
           </div>
           <div className="flex flex-wrap gap-4 text-sm text-zinc-400">
             <span className="inline-flex items-center gap-2 rounded-full border border-zinc-800 px-3 py-1">
