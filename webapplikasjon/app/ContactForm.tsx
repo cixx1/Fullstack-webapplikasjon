@@ -17,7 +17,8 @@ export default function ContactForm() {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch("http://localhost:3001/api/leads", {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+      const response = await fetch(`${apiUrl}/api/leads`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
