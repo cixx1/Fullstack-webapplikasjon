@@ -1,4 +1,5 @@
 import ContactForm from "./ContactForm";
+import PricingSection from "./PricingSection";
 
 export default function Home() {
   return (
@@ -184,89 +185,7 @@ export default function Home() {
               Hardware inkludert i Basic – ingen ekstra kostnader for oppsett!
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-3">
-            {[
-              {
-                name: "Basic Pakke",
-                price: "5 500,- engang",
-                setup: "Ingen månedlig kost",
-                features: [
-                  "Raspberry Pi 5 ferdig programmert",
-                  "27\" HD-skjerm + kabler, case og feste",
-                  "Hotspot-onboarding og USB-reset",
-                  "Oppsett på stedet",
-                  "1 måned gratis test",
-                  "Ingen løpende service inkludert",
-                ],
-                cta: "Bestill Basic",
-                highlight: false,
-              },
-              {
-                name: "Pro Service",
-                price: "299,-/mnd",
-                setup: "Ingen binding",
-                features: [
-                  "Jeg oppdaterer innholdet ditt hver måned",
-                  "Jeg følger med at skjermen virker",
-                  "Feilretting på nett eller ved besøk",
-                  "Enkle tillegg (f.eks. vær-visning)",
-                ],
-                cta: "Legg til service",
-                highlight: true,
-              },
-              {
-                name: "Enterprise",
-                price: "Kontakt oss",
-                setup: "Tilpasset",
-                features: [
-                  "6+ infoskjermer for større bedrifter",
-                  "Tilpasset hardware og oppsett",
-                  "Serviceavtale, enkel administrasjon og oppstartshjelp",
-                  "Direkte dialog for behov",
-                ],
-                cta: "Snakk med oss",
-                highlight: false,
-              },
-            ].map((tier) => (
-              <div
-                key={tier.name}
-                className={`flex flex-col rounded-2xl border p-6 ${
-                  tier.highlight
-                    ? "border-green-500/50 bg-green-500/10 shadow-xl shadow-green-500/20"
-                    : "border-zinc-900 bg-zinc-950/40"
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-bold">{tier.name}</h3>
-                  {tier.highlight && (
-                    <span className="rounded-full bg-green-500 px-3 py-1 text-xs font-semibold text-black">
-                      Mest valgt
-                    </span>
-                  )}
-                </div>
-                <p className="mt-4 text-3xl font-bold">{tier.price}</p>
-                <p className="text-sm text-zinc-400">{tier.setup}</p>
-                <ul className="mt-4 space-y-2 text-sm text-zinc-200">
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-green-400" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="#contact"
-                  className={`mt-6 rounded-lg px-4 py-2 text-center text-sm font-semibold transition ${
-                    tier.highlight
-                      ? "bg-green-500 text-black hover:bg-green-400"
-                      : "border border-zinc-800 text-white hover:border-zinc-600"
-                  }`}
-                >
-                  {tier.cta}
-                </a>
-              </div>
-            ))}
-          </div>
+          <PricingSection />
         </section>
 
         <section

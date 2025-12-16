@@ -41,6 +41,36 @@ app.get("/api/leads", async (_req, res) => {
   }
 });
 
+app.get("/api/packages", async (_req, res) => {
+  try {
+    const result = await pool.query(
+      "SELECT id, product_id, name, price, features FROM packages WHERE product_id = 1 ORDER BY id ASC"
+    );
+    return res.json(result.rows);
+  } catch (err) {
+    console.error("DB error:", err);
+    return res.status(500).json({ error: "Kunne ikke hente packages" });
+  }
+});
+
+app.put("/api/packages/:id", async (req, res) => {
+  const { id } = req.params;
+  const { price } = req.body;
+  if (price === undefined || price < 0) {
+    return res.status(400).json({ error: "Ugyldig pris" });
+  }
+  try {
+    await pool.query(
+      "UPDATE packages SET price = $1 WHERE id = $2",
+      [price, id]
+    );
+    return res.json({ success: true });
+  } catch (err) {
+    console.error("DB error:", err);
+    return res.status(500).json({ error: "Kunne ikke oppdatere pris" });
+  }
+});
+
 app.get("/api/health", (_req, res) => {
   res.json({ ok: true });
 });

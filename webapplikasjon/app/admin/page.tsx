@@ -1,4 +1,5 @@
 import LeadsList from "./LeadsList";
+import PriceEditor from "./PriceEditor";
 
 export default function AdminPage() {
   return (
@@ -24,10 +25,8 @@ export default function AdminPage() {
           </div>
 
           <div>
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
-              <h3 className="text-lg font-semibold">Innstillinger</h3>
-              <p className="mt-2 text-sm text-zinc-400">Plassholder for admin-innstillinger, eksport og brukerstyring.</p>
-            </div>
+            <p className="text-sm text-zinc-400">Rediger priser på pakker.</p>
+            <PriceEditor />
           </div>
         </section>
       </main>
