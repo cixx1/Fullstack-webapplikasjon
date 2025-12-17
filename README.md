@@ -121,8 +121,8 @@ docker compose up -d
 ```
 
 Når alle tjenester er oppe kan du åpne:
-- Frontend: http://localhost:3000
-- Backend:  http://localhost:3001
+- http://localhost:3000
+
 
 For å stoppe og fjerne containere:
 
@@ -216,15 +216,4 @@ Manuell test av kontaktskjema og prisendring:
 3. Send inn et kontaktskjema og sjekk at det vises i `http://localhost:3000/admin`
 4. Rediger en pakke i admin og bekreft at prisen endres
 
-## Commit melding for disse endringene
 
-```
-chore: Oppdater README til dagens tilstand og korriger mappestruktur
-
-- Oppdaterer dokumentasjon for root docker-compose, Dockerfiles og kjør-instruksjoner
-- Rettet og synkronisert mappestruktur
-```
-
-----
-
-Hvis du vil at jeg skal gjøre en mindre forklaring eller legge til flere tekniske detaljer (f.eks. eksempel-requests for API), si ifra så legger jeg det til.
